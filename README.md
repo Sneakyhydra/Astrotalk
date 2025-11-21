@@ -10,7 +10,12 @@
    ```bash
    make install
    ```
-3. Run the application:
+3. Create a `.env` file from the example:
+   ```bash
+   cp .env.example .env
+   ```
+4. Configure environment variables in the `.env` file as needed.
+5. Run the application:
    ```bash
    python main.py
    ```
@@ -29,18 +34,22 @@
    ```bash
    make install-dev
    ```
-4. Make your changes and ensure code quality:
+4. Create a `.env` file from the example if you haven't already:
+   ```bash
+   cp .env.example .env
+   ```
+5. Make your changes and ensure code quality:
    ```bash
    make check
    ```
-5. Run tests to ensure everything works:
+6. Run tests to ensure everything works:
    ```bash
    make test
    ```
-6. Commit and push your changes:
+7. Commit and push your changes:
    ```bash
    git add .
    git commit -m "Add your commit message"
    git push origin feature/your-feature
    ```
-7. Open a pull request for review.
+8. Open a pull request for review.
