@@ -1,0 +1,61 @@
+[project]
+name = "astrotalk"
+version = "1.0.0"
+description = "A Python library providing astrology predictions"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+
+authors = [
+    { name = "Dhruv Rishishwar", email = "dhruvrishishwar2@gmail.com" }
+]
+
+keywords = ["astrology"]
+
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+dependencies = [
+    "nltk",
+    "python-dotenv",
+    "qdrant-client",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "flake8",
+    "black",
+    "isort",
+    "mypy",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = ["build", "dist", ".venv"]
+
+[tool.mypy]
+python_version = 3.11
+strict = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unreachable = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')"
+]
