@@ -158,8 +158,7 @@ Tone: Friendly, mystical, encouraging"""
                 {
                     "role": "system",
                     "content": (
-                        "You are an expert astrologer providing "
-                        "personalized daily insights."
+                        "You are an expert astrologer providing " "personalized daily insights."
                     ),
                 },
                 {"role": "user", "content": prompt},

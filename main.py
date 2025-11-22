@@ -4,7 +4,7 @@ import os
 from datetime import date, datetime
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request
+from flask import Flask, Response, jsonify, request
 
 from database.cache import get_insight_cache
 from embedding.llm import generate_insight
@@ -16,9 +16,6 @@ from model.zodiac import calculate_zodiac_sign, get_zodiac_info
 load_dotenv()
 
 app = Flask(__name__)
-
-
-from flask import Response
 
 
 @app.route("/health", methods=["GET"])
