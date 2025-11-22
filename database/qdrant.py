@@ -11,9 +11,7 @@ def get_qdrant_client() -> QdrantClient:
         qdrant_url = os.getenv("QDRANT_HOST", None)
         qdrant_api_key = os.getenv("QDRANT_API_KEY", None)
         if qdrant_url is None or qdrant_api_key is None:
-            raise ValueError(
-                "QDRANT_HOST and QDRANT_API_KEY environment variables must be set"
-            )
+            raise ValueError("QDRANT_HOST and QDRANT_API_KEY environment variables must be set")
         _qdrant_client = QdrantClient(
             url=qdrant_url,
             api_key=qdrant_api_key,
@@ -21,6 +19,6 @@ def get_qdrant_client() -> QdrantClient:
     return _qdrant_client
 
 
-qdrant_client = get_qdrant_client()
-
-print(qdrant_client.get_collections())
+# Example usage:
+# qdrant_client = get_qdrant_client()
+# print(qdrant_client.get_collections())

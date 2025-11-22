@@ -1,3 +1,6 @@
 python-dotenv
 qdrant-client
 nltk
+sentence-transformers
+flask
+openai
